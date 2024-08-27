@@ -1,0 +1,6 @@
+matplotlib==3.5.1
+numpy==1.22.3
+opencv-python==4.5.5.64
+tensorflow==2.10.1
+Django>=4.2,<5.1
+wagtail>=6.1,<6.2
