@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div style="position: relative; text-align: left; color: white;">
+    <!-- Image container -->
+    <br><br><br>
+    <div>
+        {% image page.image scale-167 as img %}
+        <img src="{{ img.url }}" alt="{{ img.alt }}" style="width: 100%;">
+    </div>
+
+    <!-- Text container -->
+    <!--<div style="position: absolute; top: 50%; right: 0%; transform: translate(-50%, -50%);">-->
+    <div style="position: absolute; top: 50%; right: 0; transform: translate(0, -50%); padding-right: 20px;">
+        <h1 style="font-size: 4em;">{{ page.title }}</h1>   
+        <p>{{ page.hero_text }}</p>
+        {% if page.hero_cta_link %}
+        <a href="{% pageurl page.hero_cta_link %}" style="color: white;">
+            {% firstof page.hero_cta page.hero_cta_link.title %}
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<!-- {{ page.body|richtext }} -->
+<!-- New Section Below the Image -->
+<section style="padding: 50px 0; text-align: left; background-color: #f8f9fa;">
+    <div class="container">
+        <p style="font-family: Calibri, sans-serif; color: rgb(0, 0, 0); font-size: 20px;">
+            Artworks and historical documents are vulnerable to damage from environmental conditions, accidents, or vandalism, threatening their integrity and accessibility. The recent vandalism of the Mona Lisa highlights the urgent need for novel art restoration techniques. Traditional restoration methods are resource-intensive, underscoring the necessity for alternative approaches like deep learning.
+        </p>
+        <p style="font-family: Calibri, sans-serif; color: rgb(0, 0, 0); font-size: 20px;">
+            This project aims to develop powerful convolutional neural network (CNN) algorithms to assess and reconstruct damaged images, specifically targeting the removal of artificially added multicolour lines. Our goal is to provide scalable and efficient tools for preserving cultural heritage, benefiting galleries, museums, and other cultural institutions.
+        </p> 
+        <p style="font-family: Calibri, sans-serif; color: rgb(0, 0, 0); font-size: 20px;">
+            By leveraging deep learning, we seek to contribute to the preservation of valuable cultural artifacts for future generations.
+        </p>
+    </div>
+</section>
+
+{% endblock content %}

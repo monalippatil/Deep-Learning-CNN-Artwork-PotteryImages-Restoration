@@ -1,0 +1,14 @@
+{% load wagtailcore_tags navigation_tags %}
+
+
+<header>
+    {% get_site_root as site_root %}
+    <nav>
+        <p>
+        <a href="{% pageurl site_root %}" style="color: rgb(255, 255, 255)">Home |</a> 
+        {% for menuitem in site_root.get_children.live.in_menu %} 
+            <a href="{% pageurl menuitem %}" style="color: rgb(255, 255, 255);">{{ menuitem.title }} |</a>
+        {% endfor %}
+        </p>
+    </nav>
+</header>
