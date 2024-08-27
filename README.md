@@ -1,7 +1,7 @@
 **Automated Artwork Image Restoration Using CNNs: A Deep Learning
 Approach to Image Inpainting for Pottery**
 
-**<u>Project Overview</u>**
+**Project Overview**
 
 Artworks and historical artifacts are often subjected to damage due to
 environmental conditions, accidents, or vandalism. Traditional methods
@@ -24,21 +24,21 @@ a type of CNN designed consisting of an encoder-decoder structure that
 captures high-resolution details and multi-scale features, making it
 suitable for inpainting tasks.
 
-**<u>Datasets</u>**
+**Datasets**
 
-## The dataset consists of 660 Kubachi ware images also known as Persian pottery which is prominently featured in Iranian historical artwork to decorate houses, mosques, palaces, tombs and historical or architectural structures. This genre of art primarily consists of flat pieces like bowls, plates, and ceramics, embellished with an array of decorative motifs and patterns in hues like black, green, blue, ochre, brown etc.  [the-dataset-consists-of-660-kubachi-ware-images-also-known-as-persian-pottery-which-is-prominently-featured-in-iranian-historical-artwork-to-decorate-houses-mosques-palaces-tombs-and-historical-or-architectural-structures.-this-genre-of-art-primarily-consists-of-flat-pieces-like-bowls-plates-and-ceramics-embellished-with-an-array-of-decorative-motifs-and-patterns-in-hues-like-black-green-blue-ochre-brown-etc.]
+## The dataset consists of 660 Kubachi ware images also known as Persian pottery which is prominently featured in Iranian historical artwork to decorate houses, mosques, palaces, tombs and historical or architectural structures. This genre of art primarily consists of flat pieces like bowls, plates, and ceramics, embellished with an array of decorative motifs and patterns in hues like black, green, blue, ochre, brown etc. 
 
 The dataset is publicly accessible at
 <https://github.com/NacerFaraj/Persian-Pottery-Dataset>
 
 ## <img src="./attachments/projectreadme/media/image1.png"
-style="width:6.26806in;height:4.28056in" /> [section]
+style="width:6.26806in;height:4.28056in" />
 
 Figure 1: Pottery images from the dataset.
 
-**<u>Preprocessing</u>**
+**Preprocessing**
 
-## Prior to training, the images undergo several preprocessing steps: [prior-to-training-the-images-undergo-several-preprocessing-steps]
+## Prior to training, the images undergo several preprocessing steps:
 
 ## Loading and Resizing: Images are loaded and resized to a consistent size of 256x256 pixels.
 
@@ -48,7 +48,7 @@ Figure 1: Pottery images from the dataset.
 
 ## Masking: Random multicolor lines are added to simulate damage, creating a set of masked images for training.
 
-## <u>CNN Architecture</u> [cnn-architecture]
+## CNN Architecture
 
 Experiments were conducted with the UNet architecture which included
 masking with single and multiple random colours, as well as with and
@@ -84,7 +84,7 @@ upsamples from 32x32 to 64x64, 128x128, and 256x256 pixels.
 sigmoid activation function to generate inpainted image of 256x256 size
 and 3 colour channels.
 
-## <u>Model Summary</u> [model-summary]
+## Model Summary
 
 Below are the details of the Unet model settings utilised to train and
 evaluate the model performance for inpainting task.
@@ -214,7 +214,7 @@ multicoloured lines have been successfully removed in the inpainted
 image while retaining the intricate patterns, visual coherence and
 consistency of the pottery's image.
 
-**<u>Conclusion</u>**
+**Conclusion**
 
 The project focuses on an inpainting task utilizing the CNN network that
 reconstructs the damaged image by removing colourful lines drawn on it.
@@ -252,24 +252,28 @@ undamaged state.
 
 **Repository Structure**
 
-\|-- notebooks
+|-- notebooks
 
-\| \|-- DeepLearning_Image_Inpainting_CNN.ipynb
+| |-- DeepLearning\_Image\_Inpainting\_CNN.ipynb
 
-\|-- report
+|-- report
 
-\| \|-- Project Report.pdf
+| |-- Project Report.pdf
 
-\|-- dataset
+|-- dataset
 
-\| \|-- Persian Pottery Images
+| |-- Persian Pottery Images
 
-\|-- web_app
+|-- web\_app
 
-\| \|-- Artwork_Inpainting
+| |-- Artwork\_Inpainting
 
-\| \|-- mysite
+| |-- mysite
 
-\|-- requirements.txt
+|-- requirements.txt
 
-\|-- README.md
+|-- README.md
+
+<img src="./attachments/projectreadme/media/image5.png"
+style="width:3.94407in;height:2.48487in"
+alt="A screenshot of a computer Description automatically generated" />
