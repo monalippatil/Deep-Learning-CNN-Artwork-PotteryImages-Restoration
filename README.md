@@ -1,7 +1,6 @@
-**Automated Artwork Image Restoration Using CNNs: A Deep Learning
-Approach to Image Inpainting for Pottery**
+## **Automated Artwork Image Restoration Using CNNs: A Deep Learning Approach to Image Inpainting for Pottery**
 
-**Project Overview**
+### **<u>Project Overview</u>**
 
 Artworks and historical artifacts are often subjected to damage due to
 environmental conditions, accidents, or vandalism. Traditional methods
@@ -17,38 +16,38 @@ automate the restoration process, making it more efficient and scalable.
 The restoration is performed using a Convolutional Neural Network (CNN)
 model based on the U-Net architecture.
 
-**Task:**
+### **Tasks:**
 
 Image inpainting task: Building a model based on the U-Net architecture,
 a type of CNN designed consisting of an encoder-decoder structure that
 captures high-resolution details and multi-scale features, making it
 suitable for inpainting tasks.
 
-**Datasets**
+### **<u>Datasets</u>**
 
-## The dataset consists of 660 Kubachi ware images also known as Persian pottery which is prominently featured in Iranian historical artwork to decorate houses, mosques, palaces, tombs and historical or architectural structures. This genre of art primarily consists of flat pieces like bowls, plates, and ceramics, embellished with an array of decorative motifs and patterns in hues like black, green, blue, ochre, brown etc. 
+The dataset consists of 660 Kubachi ware images also known as Persian pottery which is prominently featured in Iranian historical artwork to decorate houses, mosques, palaces, tombs and historical or architectural structures. This genre of art primarily consists of flat pieces like bowls, plates, and ceramics, embellished with an array of decorative motifs and patterns in hues like black, green, blue, ochre, brown etc. 
 
 The dataset is publicly accessible at
 <https://github.com/NacerFaraj/Persian-Pottery-Dataset>
 
-## <img src="./attachments/projectreadme/media/image1.png"
+<img src="./attachments/projectreadme/media/image1.png"
 style="width:6.26806in;height:4.28056in" />
 
 Figure 1: Pottery images from the dataset.
 
-**Preprocessing**
+### **<u>Preprocessing</u>**
 
-## Prior to training, the images undergo several preprocessing steps:
+Prior to training, the images undergo several preprocessing steps:
 
-## Loading and Resizing: Images are loaded and resized to a consistent size of 256x256 pixels.
+**Loading and Resizing**: Images are loaded and resized to a consistent size of 256x256 pixels.
 
-## Normalization: Pixel values are normalized to the range \[0, 1\].
+**Normalization**: Pixel values are normalized to the range \[0, 1\].
 
-## Data Augmentation: Techniques such as random rotations, flips, and brightness adjustments are applied to increase data diversity and enhance model robustness.
+**Data Augmentation**: Techniques such as random rotations, flips, and brightness adjustments are applied to increase data diversity and enhance model robustness.
 
-## Masking: Random multicolor lines are added to simulate damage, creating a set of masked images for training.
+**Masking**: Random multicolor lines are added to simulate damage, creating a set of masked images for training.
 
-## CNN Architecture
+## <u>CNN Architectures</u>
 
 Experiments were conducted with the UNet architecture which included
 masking with single and multiple random colours, as well as with and
@@ -84,7 +83,7 @@ upsamples from 32x32 to 64x64, 128x128, and 256x256 pixels.
 sigmoid activation function to generate inpainted image of 256x256 size
 and 3 colour channels.
 
-## Model Summary
+## <u>Model Summary</u>
 
 Below are the details of the Unet model settings utilised to train and
 evaluate the model performance for inpainting task.
@@ -144,7 +143,7 @@ convolutional layers</p></td>
 </tbody>
 </table>
 
-Experimental results:
+### Experimental results:
 
 Above are the performance results of the UNet CNN model trained
 specifically to remove the artificially inserted multicolor lines.
@@ -190,20 +189,20 @@ Below is the testing evidence.
 <img src="./attachments/projectreadme/media/image2.png"
 style="width:6.26806in;height:3.21319in" />
 
-Figure 7: Inference results
+Figure 2: Inference results
 
 <img src="./attachments/projectreadme/media/image3.png"
 style="width:6.26806in;height:3.14653in" />
 
-Figure 8: Inference results
+Figure 3: Inference results
 
 <img src="./attachments/projectreadme/media/image4.png"
 style="width:6.26806in;height:3.14653in" />
 
-Figure 9: Inference results
+Figure 4: Inference results
 
 The UNet model's output on unseen pottery photos is shown in the figure
-7, 8 and 9. Each set involves the distorted testing image with
+2, 3 and 4. Each set involves the distorted testing image with
 multicolor lines and the corresponding inpainted image post the
 inpainting by the model.
 
@@ -214,7 +213,7 @@ multicoloured lines have been successfully removed in the inpainted
 image while retaining the intricate patterns, visual coherence and
 consistency of the pottery's image.
 
-**Conclusion**
+### **<u>Conclusion</u>**
 
 The project focuses on an inpainting task utilizing the CNN network that
 reconstructs the damaged image by removing colourful lines drawn on it.
@@ -232,7 +231,7 @@ sites and incorporate them into our inpainting process to discover if
 CNN models could accurately reconstruct the naturally damaged to its
 undamaged state.
 
-**Prerequisites**
+### **Prerequisites**
 
 -   Python 3.7+
 
@@ -250,29 +249,7 @@ undamaged state.
 
 -   Jupyter Notebook
 
-**Repository Structure**
-
-|-- notebooks
-
-| |-- DeepLearning\_Image\_Inpainting\_CNN.ipynb
-
-|-- report
-
-| |-- Project Report.pdf
-
-|-- dataset
-
-| |-- Persian Pottery Images
-
-|-- web\_app
-
-| |-- Artwork\_Inpainting
-
-| |-- mysite
-
-|-- requirements.txt
-
-|-- README.md
+### **Repository Structure**
 
 <img src="./attachments/projectreadme/media/image5.png"
 style="width:3.94407in;height:2.48487in"
